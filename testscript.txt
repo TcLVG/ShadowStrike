@@ -1,0 +1,73 @@
+@echo off
+ 
+title raxo hacked u
+ 
+color a
+ 
+echo Running: Virus Megamind
+ 
+timeout /t 2 /nobreak >nul
+ 
+echo:
+ 
+echo You are an Idiot!
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo This is a Virus
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo:
+ 
+echo Processing...
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo:
+ 
+echo Deleting System Files...
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo Currupting Windows...
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo Sending Spam e-mails...
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo Wiping Hard Drive...
+ 
+timeout /t 2 /nobreak >nul
+ 
+echo Hack Complete!
+ 
+timeout /t 1 /nobreak >nul
+ 
+echo:
+ 
+echo Have a Nice Day!
+ 
+timeout /t 2 /nobreak >nul
+ 
+echo Your Computer has Committed Suicide!
+ 
+timeout /t 1 /nobreak >nul
+ 
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
+start chrome.exe https://www.youtube.com/watch?v=dQw4w9WgXcQ
