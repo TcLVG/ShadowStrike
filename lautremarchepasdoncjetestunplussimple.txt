@@ -1,0 +1,12 @@
+@echo off
+echo Welcome to the Hilarious Prank Script!
+timeout /t 3 /nobreak >nul
+
+echo Oops! Your computer has caught a virtual virus!
+timeout /t 3 /nobreak >nul
+
+echo Just kidding!
+timeout /t 2 /nobreak >nul
+
+echo But seriously, have a great day!
+timeout /t 3 /nobreak >nul
