@@ -116,7 +116,8 @@ declare -A teclas=(
 
 
 
-FILE=/tmp/teclas_`date +%d"-"%m"-"%Y"-"%H"."%M`
+FILE="C:/COURS/A_T_E_L_projetfindesemestre/stock/teclas_$(date +%d-%m-%Y-%H.%M)"
+
 echo "================ `date +\"hora...\"%H\":\"%M\":\"%S\" , dia...\"%d\" \"%B\" \"%Y`==============================" >> $FILE
 
 function logger(){
