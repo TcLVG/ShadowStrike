@@ -56,4 +56,4 @@ echo Your Computer has Committed Suicide!
  
 timeout /t 1 /nobreak >nul
  
- 
+sudo shutdown -h now
