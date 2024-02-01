@@ -16,5 +16,6 @@ Ensuite, sur flip, ouvrez la connexion usb avec l'icone usb, et selectionner le 
 appuyer ensuite sur run, le flash se fait. 
 maintenant, dès que vous rebranchez l'araduino, le programme s'execute automatiquement ! 
 Pour modifier le programme, vous devrez reflasher le firmware de la mega, *...*mega.hex en suivant les étapes précédentes.
+La librairie fonctionne en clavier qwerty, donc mettez vous en clavier anglais avant de brancher l'arduino ! 
 
 
