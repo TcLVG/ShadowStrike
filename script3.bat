@@ -1,3 +1,3 @@
 @echo off
-ver
+ver > "%temp%\version_windows.txt"
 pause
