@@ -13,7 +13,8 @@ $kernelVersion = (Get-CimInstance Win32_OperatingSystem).Version
 $cpuInfo = (Get-CimInstance Win32_Processor).Name
 
 # Récupérer la quantité de mémoire RAM disponible
-$ramInfo = (Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory  1GB
+$ramInfo = (Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB
+
 
 # Afficher les informations récupérées
 Write-Host Informations système pour $hostName 
