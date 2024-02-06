@@ -11,6 +11,9 @@
     echo --- Clef Windows ---
     powershell -Command "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
 
+    echo --- Clef LibeOffice ---
+    powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
+
     echo ----------------------------------
     echo --- Mémoire RAM et utilisation ---
     powershell "Get-WmiObject -Class Win32_OperatingSystem | Format-Table TotalVisibleMemorySize, FreePhysicalMemory, TotalVirtualMemorySize, FreeVirtualMemory -AutoSize"
