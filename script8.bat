@@ -1,21 +1,13 @@
 @echo off
 
-rem URL de l'image sur GitHub
-set "image_url=https://github.com/TcLVG/ShadowStrike/blob/main/shrek.jpg"
+rem URL de la vidéo YouTube
+set "video_url=https://youtu.be/dQw4w9WgXcQ"
 
-rem Chemin où sauvegarder temporairement l'image
-set "temp_image=C:\temp\image.jpg"
+rem Téléchargement de la vidéo avec youtube-dl
+youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" -o video.mp4 %video_url%
 
-rem Téléchargement de l'image depuis GitHub
-curl -o "%temp_image%" "%image_url%"
+rem Lecture de la vidéo avec mpv
+mpv video.mp4
 
-rem Commande pour changer le fond d'écran
-reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%temp_image%" /f
-
-rem Actualisation du fond d'écran
-rundll32.exe user32.dll, UpdatePerUserSystemParameters
-
-echo Fond d'écran changé avec succès.
-
-rem Suppression de l'image temporaire
-del "%temp_image%"
+rem Suppression de la vidéo après la lecture
+del video.mp4
