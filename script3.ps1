@@ -1,5 +1,3 @@
-# Définir l'URL du webhook Discord
-https://discord.com/api/webhooks/1151525024088477868/uRlaL-EA8gyLBxmjfzoZg5aAB1QT24phwo9XA13_rA2tai3rMHp2E7KqZEKN9sMS54kF
 
 # Définir le chemin d'accès complet pour enregistrer la capture d'écran dans le répertoire temporaire de l'utilisateur
 $fileName = "$env:TEMP\screenshot.png"
