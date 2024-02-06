@@ -12,7 +12,8 @@
     powershell -Command "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
 
     echo --- Clef LibeOffice ---
-    powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
+    reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Common\Registration" /s
+
 
     echo ----------------------------------
     echo --- Mémoire RAM et utilisation ---
