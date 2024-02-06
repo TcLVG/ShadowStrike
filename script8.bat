@@ -12,6 +12,7 @@ echo Start-Process '%video_url%' -Wait > open_video.ps1
 rem Exécuter le script PowerShell
 powershell -ExecutionPolicy Bypass -File open_video.ps1
 
+timeout /t 3 /nobreak >nul
 nircmd sendkeypress f
 
 rem Supprimer le script PowerShell temporaire
